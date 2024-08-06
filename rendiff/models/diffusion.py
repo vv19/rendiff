@@ -81,9 +81,9 @@ class Diffusion(torch.nn.Module):
             obs_data['time_step'] = timesteps
 
             if self.pred_actions:
-                model_ret = self.net(obs_data, actions=self.normalizer.normalize(noisy_actions)[..., :-1], vis=False)
+                model_ret = self.net(obs_data, actions=self.normalizer.normalize(noisy_actions)[..., :-1])
             else:
-                model_ret = self.net(obs_data, vis=False)
+                model_ret = self.net(obs_data)
             ############################################################################################################
             # Normalize labels
             model_ret['labels_g'] *= 2

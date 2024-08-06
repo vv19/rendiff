@@ -65,7 +65,7 @@ Then, train the model:
 ```
 python3 -m rendiff.train \
  --run_name='LIFT_LID' \
- --datadir='/path/to/datadir' \
+ --datadir='/path/to/datadir/task_name' \
  --num_demos=100
 ```
 
